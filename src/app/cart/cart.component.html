@@ -1,0 +1,35 @@
+<div class="row">
+    <div *ngFor="let column of columns" class="col">
+        {{column}}
+    </div>
+    <div class="col">Actions</div>
+</div>
+
+<div class="row my-3">
+    <div *ngFor="let item of products" class="row">
+    <div class="col my-3">
+        <p>{{item.material.Name}}</p>
+    </div>
+    <div class="col my-3">
+        <p>{{item.material.Colour}}</p>
+    </div>
+    <div class="col my-3">
+        <p>{{item.material.Thickness}}</p>
+    </div>
+    <div class="col my-3">
+        <p>{{item.material.Fireproofclass}}</p>
+    </div>
+    <div class="col my-3">
+        <p>{{item.material.Supplier}}</p>
+    </div>
+    <div class="col my-3 quantity">
+        <p>{{item.quantity}}</p>
+    </div>
+    <div class="col my-3">
+        <button (click)="deleteOrderItems(item)" type="button" class="btn btn-danger">Delete</button>
+    </div>
+</div>
+    <div class="order my-3">
+        <button (click)="sendOrder()" type="button" class="btn btn-success">Send Order</button>
+    </div>
+

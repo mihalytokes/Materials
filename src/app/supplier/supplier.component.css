@@ -1,0 +1,13 @@
+.col{
+    max-width: 16%;
+}
+.modify{
+    max-width: 7%;
+    margin-right: 5px;
+}
+.delete{
+    max-width: 7%;
+}
+.row{
+    height: 35px;
+}

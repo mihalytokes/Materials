@@ -3,11 +3,11 @@ import { BaseService } from '../base.service';
 import { map } from 'rxjs';
 
 @Component({
-  selector: 'app-material',
-  templateUrl: './material.component.html',
-  styleUrls: ['./material.component.css']
+  selector: 'app-supplier',
+  templateUrl: './supplier.component.html',
+  styleUrls: ['./supplier.component.css']
 })
-export class MaterialComponent {
+export class SupplierComponent {
   materials:any;
   newmaterial:any={};
   columns:any=["Name","Colour","Thickness","Fireproofclass","Supplier"];
@@ -24,4 +24,16 @@ export class MaterialComponent {
     })
   }
   
+  createMaterial(body:any){
+    this.baseService.create(body).then()
+    .catch(err=>{this.showerror=true; this.errorMessage=err.message});
+  }
+  updateMaterial(body:any){
+    this.baseService.update(body.key, body).then()
+    .catch(err=>{this.showerror=true; this.errorMessage=err.message});
+  }
+  deleteMaterial(body:any){
+    this.baseService.delete(body.key).then()
+    .catch(err=>{this.showerror=true; this.errorMessage=err.message});
+  }
 }

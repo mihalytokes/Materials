@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { GoogleAuthProvider, sendEmailVerification } from 'firebase/auth';
 import { Observable, Subject } from 'rxjs';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -48,7 +49,7 @@ export class AuthService {
   }
   AuthLogin(provider:any)
   {
-    return this.afAuth.signInWithPopup(provider);
+    return this.afAuth.signInWithRedirect(provider);
   }
   SendEmailVerification(){
   return this.afAuth.currentUser
@@ -60,5 +61,7 @@ export class AuthService {
    return this.afAuth.sendPasswordResetEmail(email);
   }
 
+  SendEmail(){
+  }
 
 }

@@ -1,0 +1,19 @@
+#inlineCheckbox1{
+    border-color: black;
+    margin-left: 25px;
+}
+#inlineCheckbox2{
+    border-color: black;
+}
+#regButton{
+    margin-top: 5px;
+}
+.Line{
+    border-color: black;
+}
+.card-body{
+    max-width: 100vh;
+}
+.card{
+    max-width: 100vh;
+}

@@ -15,6 +15,9 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule } from '@angular/forms';
 import { enviroments } from './enviroments';
+import { CartComponent } from './cart/cart.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { enviroments } from './enviroments';
     SigninComponent,
     RegistrationComponent,
     VerifyEmailComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    CartComponent,
+    SupplierComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

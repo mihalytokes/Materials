@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class RegistrationComponent {
   constructor(private authService: AuthService, private router:Router ){}
 
+  userType:any=["supplier", "admin"];
+
   signUp(email:string, password:string){
     this.authService.SignUp(email,password)
     .then(()=>this.authService.SendEmailVerification())

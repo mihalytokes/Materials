@@ -1,4 +1,4 @@
-<nav class="mx-2 navbar navbar-expand-lg navbar-light bg-light">
+<nav class="mx-2 navbar navbar-expand-lg navbar-light bg-light nav">
     <a class="navbar-brand" href="#">Material Database</a>
     <button (click)="collapse= !collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,6 +21,27 @@
             [routerLinkActiveOptions]="{exact:true}"
             >Material</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          routerLink="/supplier"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}"
+          >Supplier</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        routerLink="/customer"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}"
+        >Customer</a>
+    </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          routerLink="/cart"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}"
+          >Cart</a>
+      </li>
         <li class="nav-item">
             <a class="nav-link"
             (click)="Signout()"

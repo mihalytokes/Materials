@@ -1,24 +1,26 @@
 <div class="row">
-    <h2 class=>Actually available raw materials:</h2>
-</div>
-<div class="row">
     <div *ngFor="let column of columns" class="col">
         {{column}}
     </div>
+    <div class="col">Quantity</div>
 </div>
-
-<div class="row my-3">
-    <div *ngFor="let column of columns" class="col">
-    </div>
-
-</div>
-
 
 <div *ngIf="materials">
         <div *ngFor="let material of materials" class="row my-2">
             <div *ngFor="let column of columns" class="col">
                 <input type="text" class="form-control" [(ngModel)]="material[column]">
             </div>
+            <div class="col cart" >
+                <div class="row">
+                    <div class="col">
+                        <input #quantity type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <button (click)="addOrder(material, quantity.value)" type="button" class="btn btn-success">To cart</button>
+                    </div>
+                 </div>
+            </div>
+        </div>
 </div>
 
 <div *ngIf="showerror" class="card alert alert-warning" role="alert">

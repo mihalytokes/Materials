@@ -12,12 +12,12 @@ export class SigninComponent {
 
   signIn(email:string, password:string){
     this.authService.SignIn(email, password)
-    .then(()=>(this.authService.getIsLogged().subscribe(()=> {if (this.authService.isLogged) this.router.navigate(['/material'])})))
+    .then(()=>(this.authService.getIsLogged().subscribe(()=> {if (this.authService.isLogged) this.router.navigate(['/home'])})))
     .catch((error)=>{alert(error.message)});
   }
   googleAuth(){
     this.authService.GoogleAuth()
-    .then(()=>(this.authService.getIsLogged().subscribe(()=> {if (this.authService.isLogged) this.router.navigate(['/material'])})))
+    .then(()=>(this.authService.getIsLogged().subscribe(()=> {if (this.authService.isLogged) this.router.navigate(['/home'])})))
     .catch((error)=>{alert(error.message)});
   }
 }
